@@ -7,14 +7,16 @@ const allowedWords = fs.readFileSync('./allowedWords.json', 'utf-8');
 String.prototype.removeStr = function(stringToRemove) {
     return this.includes(stringToRemove) ? this.split(stringToRemove).join("") : this.toString();
 }
-var guesses, guess, regex = ["mrjocktvquizphdbagsfewlynx","mrjocktvquizphdbagsfewlynx","mrjocktvquizphdbagsfewlynx","mrjocktvquizphdbagsfewlynx","mrjocktvquizphdbagsfewlynx"];
+var guesses, regex = ["mrjocktvquizphdbagsfewlynx","mrjocktvquizphdbagsfewlynx","mrjocktvquizphdbagsfewlynx","mrjocktvquizphdbagsfewlynx","mrjocktvquizphdbagsfewlynx"];
 
 for (guesses = 6; guesses > 0; guesses--) {
-    // rl.question(`\nguess a word; you have ${guesses} left:\n`, word => {filter(word)});
-    filter("")
+    rl.question(`\nguess a word; you have ${guesses} left:\n`, async word => {
+        await filter(word);
+    });
+    rl.close();
 }
 
-function filter(word) {
-    console.log("asdfghjkl".removeStr('jk'))
+async function filter(word) {
+    console.log("uh", word, guesses);
 }
 
