@@ -19,4 +19,3 @@ for (guesses = 6; guesses > 0; guesses--) {
 async function filter(word) {
     console.log("uh", word, guesses);
 }
-
