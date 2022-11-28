@@ -1,0 +1,26 @@
+:root {
+    --absent: #787c7e;
+    --correct: #538d4e;
+    --present: #b59f3b;
+}
+
+#e {
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+#form {
+    font-family: monospace, monospace;
+}
+
+input {
+    float: right;
+    width: calc(100% - 15em)
+}
